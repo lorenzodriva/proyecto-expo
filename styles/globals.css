@@ -4,3 +4,7 @@
     --t-color: #ffecd1;
     --q-color: #ff7d00;
 }
+
+.texto{
+    color: var(--q-color);
+}
