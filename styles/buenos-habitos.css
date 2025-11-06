@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 :root {
             --uwu: #15616d;
             --uwu-oscuro: #001524;
@@ -16,10 +17,16 @@
     text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
 }
         
+=======
+>>>>>>> b43972285ab7bb60b34fb70c6a6b4e62340889fe
 body {
   font-family: 'System-ui', System-ui;
   background-color: #f0f4f8;
   margin: 0;
+<<<<<<< HEAD
+=======
+  padding: 90px;
+>>>>>>> b43972285ab7bb60b34fb70c6a6b4e62340889fe
 }
 
 h1 {
@@ -69,6 +76,7 @@ h1 {
   font-size: 20px;
   color: #555;
 }
+<<<<<<< HEAD
 nav {
     background-color: var(--uwu);
     padding: 15px 0;
@@ -146,3 +154,5 @@ h2{
 #title-actividades {
     margin: 40px 0 0 115px;
 }
+=======
+>>>>>>> b43972285ab7bb60b34fb70c6a6b4e62340889fe
