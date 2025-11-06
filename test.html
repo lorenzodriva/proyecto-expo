@@ -1,0 +1,106 @@
+    <!DOCTYPE html>
+    <html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Test</title>
+        <link rel="stylesheet" href="./styles/test.css">
+    </head>
+    <body>
+        <header>
+            <nav>
+                <div class="nav-container">
+                    <a href="#" class="nav-logo">
+                        <img src="res/IPFLB.png" alt="Logo Expo Fray" style="height:40px;vertical-align:middle;margin-right:10px;">        
+                    </a>
+                    <ul class="nav-links">
+                        <li><a href="./index.html">Inicio</a></li>
+                        <li><a href="./buenos-habitos.html">Buenos Habitos</a></li>
+                        <li><a href="./consecuencias.html">Consecuencias</a></li>
+                        <li><a href="./test.html">Test</a></li>
+                    </ul>
+                </div>
+            </nav>
+        </header>
+        <main>
+            <div id="contenedor-body">
+                <div id="contenedor-izquierda">
+                    <div class="contenedor-titulo">
+                        <h1>TEST</h1>
+                        <h2>Uso diario de la tecnología</h2>
+                    </div>
+                    <p>El siguiente test te va a permitir conocer tus <b>habitos digitales</b>. Seleccioná la cantidad de tiempo que pasás en las siguientes aplicaciones <b>deslizando el control</b> de cada una. Podés ayudarte con el bienestar digital. Una vez que hayas seleccionado todos los valores, presioná <b>guardar</b>. Los datos que ingreses <b>no serán utilizados</b> de ninguna manera por terceros.</p>
+                    <button id="boton" onclick="guardar()">Cargar y ver resultados</button>
+                    <button id="boton" onclick="limpiar()">Limpiar</button>
+                </div>
+                <div id="contenedor-derecha">
+                    <div id="contenedor-test">
+                        <div class="card">
+                            <div class="logo" id="logo-wp"></div>
+                            <div class="contenedor-input">
+                                <h3>WhatsApp</h3>
+                                <span id="texto-wp" class="testtxt">0h 0min</span>
+                                <input type="range" id="wp" min="0" max="360" step="5" oninput="tomarValor()" value="0">
+                            </div>
+                        </div>
+                        <div class="card">
+                            <div class="logo" id="logo-ig"></div>
+                            <div class="contenedor-input">
+                                <h3>Instagram</h3>
+                                <span id="texto-ig" class="testtxt">0h 0min</span>
+                                <input type="range" id="ig" min="0" max="360" step="5" oninput="tomarValor()" value="0">
+                            </div>
+                        </div>
+                        <div class="card">
+                            <div class="logo" id="logo-x"></div>
+                            <div class="contenedor-input">
+                                <h3>X</h3>
+                                <span id="texto-x" class="testtxt">0h 0min</span>
+                                <input type="range" id="x" min="0" max="360" step="5" oninput="tomarValor()" value="0">
+                            </div>
+                        </div>
+                        <div class="card">
+                            <div class="logo" id="logo-fb"></div>
+                            <div class="contenedor-input">
+                                <h3>Facebook</h3>
+                                <span id="texto-fb" class="testtxt">0h 0min</span>
+                                <input type="range" id="fb" min="0" max="360" step="5" oninput="tomarValor()" value="0">
+                            </div>
+                        </div>
+                        <div class="card">
+                            <div class="logo" id="logo-tt"></div>
+                            <div class="contenedor-input">
+                                <h3>Tik Tok</h3>
+                                <span id="texto-tt" class="testtxt">0h 0min</span>
+                                <input type="range" id="tt" min="0" max="360" step="5" oninput="tomarValor()" value="0">
+                            </div>
+                        </div>
+                        <div class="card">
+                            <div class="logo" id="logo-yt"></div>
+                            <div class="contenedor-input">
+                                <h3>YouTube</h3>
+                                <span id="texto-yt" class="testtxt">0h 0min</span>
+                                <input type="range" id="yt" min="0" max="360" step="5" oninput="tomarValor()" value="0">
+                            </div>
+                        </div>
+                        <div class="card">
+                            <div class="logo" id="logo-otro"></div>
+                            <div class="contenedor-input">
+                                <h3>Otro</h3>
+                                <span id="texto-otro" class="testtxt">0h 0min</span>
+                                <input type="range" id="otro" min="0" max="360" step="5" oninput="tomarValor()" value="0">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+        <footer>
+            <div id="footer-contenedor">
+                <span>Hecho por: Cuarteto Macana © - 6to A</span>
+            </div>
+        </footer>
+        <script src="./script.js"></script>   
+    </body>
+    </html>

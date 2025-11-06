@@ -1,0 +1,215 @@
+:root{
+    --p-color: #001524;
+    --s-color: #15616d;
+    --t-color: #ffecd1;
+    --q-color: #ff7d00;
+}
+
+html, body {
+    min-height: 100vh;
+    font-family: 'Segoe UI', sans-serif;
+    color: var(--p-color);
+    background-color:var(--p-color);
+    /* -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale; */
+}
+
+body {
+    margin: 0;
+    padding: 0;
+}
+
+/* contenedor central (anchura controlada para que el layout se vea "bonito") */
+.contenedor-cards {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 3rem 2rem;
+    display: flex;
+    flex-direction: column;
+    gap: 2.5rem;
+}
+
+/* título */
+.titulo {
+    font-size: 2.8rem;
+    text-align: center;
+    margin: 0;
+    color: #fff;
+}
+nav {
+    background-color: var(--s-color);
+    padding: 15px 0;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.2);
+}
+
+.nav-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+}
+
+.nav-logo {
+    color: white;
+    font-weight: bold;
+    font-size: 1.5rem;
+    transform: scale(1.5);
+}
+
+.nav-links {
+    display: flex;
+    list-style: none;
+}
+
+.nav-links li {
+    margin-left: 30px;
+}
+
+.nav-links a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: 500;
+    position: relative;
+    padding: 5px 0;
+    transition: color 0.3s;
+}
+
+.nav-container a {
+    text-decoration: none;
+}
+.nav-links a::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 0;
+    height: 2px;
+    background-color: #fff;
+    transition: width 0.3s ease;
+}
+
+.nav-links a:hover::after {
+    width: 100%;
+}
+
+.nav-links a:hover {
+    color: var(--juana-oscuro);
+}
+
+/* ---------- Fila superior (4 cards iguales en la MISMA fila) ---------- */
+.fila-0 {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(180px, 1fr)); /* 4 columnas iguales */
+    gap: 2.2rem; /* separación visible entre las 4 */
+    width: 100%;
+    align-items: stretch;
+
+    transform: scale(0.8);
+}
+
+
+.cardt {
+    background-color: var(--q-color);
+    color: #fff;
+    border-radius: 50%;
+    box-shadow: 0 10px 22px rgba(0,0,0,0.12);
+    padding: 1.6rem;
+    height: 260px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    transition: 
+        transform 0.3s ease,
+        box-shadow 0.3s ease,
+        background-color 0.3s ease; 
+}
+
+
+.cardt h1 {
+    font-size: 600%;   
+    margin: 0;
+    line-height: 0.9;
+}
+
+.cardt p {
+    margin-top: 1rem;
+    font-size: 2rem;
+    font-weight: 600;
+    
+}
+
+/* ---------- Grid de cards normales: 3 por fila ---------- */
+.grid-cards {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(220px, 1fr)); /* 3 columnas por fila */
+    gap: 2.8rem; /* separación más grande entre las 3 */
+    width: 100%;
+    align-items: start;
+    transition: 
+        transform 0.3s ease, 
+        box-shadow 0.3s ease, 
+        background-color 0.3s ease; 
+}
+
+/* estilo de cada card normal (más grande y con espacio) */
+.card {
+    background-color: var(--s-color);
+    color: #fff;
+    border-radius: 18px;
+    box-shadow: 0 10px 20px rgba(98, 119, 118, 0.18);
+    padding: 2rem;
+    text-align: center;
+    transition: 0.5s ease;
+    min-height: 220px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.card h2 {
+    font-size: 1.6rem;
+    margin: 0;
+    font-weight:bolder;
+}
+
+.card img {
+    margin-top: 1.2rem;
+    width: 140px;
+    height: auto;
+}
+
+/* hover */
+.card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 18px 30px rgba(0, 0, 0, 0.53);
+  background-color: #044954; 
+}
+.cardt:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 18px 30px rgba(0,0,0,0.16);
+    background-color: #ba5a00; /* ← azul más oscuro */
+}
+/* Pequeñas mejoras para pantallas muy pequeñas:
+    Si el ancho es demasiado pequeño, el grid se mantendrá pero las columnas podrán reducirse un poco.
+    (Si prefieres absolutamente SIN wrapping en móvil, puedo quitar este media-query.) */
+@media (max-width: 920px) {
+    .fila-0 { grid-template-columns: repeat(4, minmax(140px, 1fr)); }
+    .cardt { height: 220px; }
+    .cardt h1 { font-size: 3.6rem; }
+    .grid-cards { grid-template-columns: repeat(2, minmax(180px, 1fr)); } /* cómoda lectura en tablet */
+}
+
+@media (max-width: 520px) {
+    .fila-0 { grid-template-columns: repeat(2, minmax(140px, 1fr)); } /* en móviles la fila puede mostrarse en 2x2 */
+    .cardt { height: 180px; }
+    .cardt h1 { font-size: 2.8rem; }
+    .grid-cards { grid-template-columns: 1fr; } /* 1 por fila en móvil */
+}

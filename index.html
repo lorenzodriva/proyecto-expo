@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Conectados o Atrapados</title>
+  <link rel="stylesheet" href="./styles/index.css" />
+</head>
+
+<body>
+  <video class="video-fondo" src="./res/video_fondo.mp4" autoplay loop muted></video>
+  <header id="header">
+    <div class="logo"><img src="./res/logo-index-IPFLB.png" alt="lgfray"></div>
+    <ul>
+      <li>
+        <a href="./consecuencias.html">Consecuencias</a>
+      </li>
+      <li>
+        <a href="./buenos-habitos.html">Buenos habitos</a>
+      </li>
+      <li>
+        <a href="./test.html">Test</a>
+      </li>
+    </ul>
+    <div class="bloque-buscador">
+      <div class="buscador">
+        <input type="search">
+        <button>
+          <img src="./res/lupa.png" alt="B">
+        </button>
+      </div>
+    </div>
+  </header>
+  <section class="intro">
+    <section class="texto">
+      <p>
+        Vivimos en un mundo dominado por las pantallas. <b>¿Te has preguntado cuánto tiempo pasas realmente frente a tu
+          celular? </b>Este sitio busca generar conciencia sobre el impacto del uso excesivo de dispositivos en nuestra
+        salud física y mental.
+      </p>
+    </section>
+    <section class="bloque-espacio"></section>
+  </section>
+  <section class="cards">
+    <div class="card" id="cons">
+      <a href="consecuencias.html">¿Qué me pasa cuando uso el celular?</a>
+      <img width="75px" src="./res/1.svg" alt="">
+    </div>
+    <div class="card" id="bnos">
+      <a href="buenos-habitos.html">¿Cómo puedo mejorar mis hábitos?</a>
+      <img width="120px" src="./res/2.svg" alt="">
+    </div>
+    <div class="card" id="tst">
+      <a href="test.html">Haz el Test</a>
+      <img width="90px" src="./res/3.svg" alt="">
+    </div>
+    <div class="card" id="resl">
+      <a href="resultados.html">Volvé a ver los resultados anteriores</a>
+      <img width="60px" src="./res/4.svg" alt="">
+    </div>
+  </section>
+  <footer>
+    <p>Expo Fray 2025 · Proyecto sobre el uso de pantallas · Realizado por 6to A</p>
+  </footer>
+</body>
+<script>
+  console.log(window.scrollY)
+
+  const header = document.getElementById('header');
+
+  window.addEventListener('scroll', function() {
+    if (window.scrollY > 0) {
+      header.classList.add('fondo-solido');
+    } else {
+      header.classList.remove('fondo-solido');
+    }
+  });
+</script>
+
+</html>
