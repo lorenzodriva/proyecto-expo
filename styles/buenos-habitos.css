@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 :root {
             --uwu: #15616d;
             --uwu-oscuro: #001524;
@@ -17,16 +16,10 @@
     text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
 }
         
-=======
->>>>>>> b43972285ab7bb60b34fb70c6a6b4e62340889fe
 body {
   font-family: 'System-ui', System-ui;
   background-color: #f0f4f8;
   margin: 0;
-<<<<<<< HEAD
-=======
-  padding: 90px;
->>>>>>> b43972285ab7bb60b34fb70c6a6b4e62340889fe
 }
 
 h1 {
@@ -76,70 +69,6 @@ h1 {
   font-size: 20px;
   color: #555;
 }
-<<<<<<< HEAD
-nav {
-    background-color: var(--uwu);
-    padding: 15px 0;
-    position: sticky;
-    top: 0;
-    z-index: 100;
-    box-shadow: 0 2px 10px rgba(0,0,0,0.2);
-}
-
-.nav-container {
-    max-width: 1200px;
-    margin: 0 auto;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 0 20px;
-}
-
-.nav-logo {
-    color: white;
-    font-weight: bold;
-    font-size: 1.5rem;
-}
-
-.nav-links {
-    display: flex;
-    list-style: none;
-}
-
-.nav-links li {
-    margin-left: 30px;
-}
-
-.nav-links a {
-    color: #fff;
-    text-decoration: none;
-    font-weight: 500;
-    position: relative;
-    padding: 5px 0;
-    transition: color 0.3s;
-}
-
-.nav-container a {
-    text-decoration: none;
-}
-.nav-links a::after {
-    content: "";
-    position: absolute;
-    left: 0;
-    bottom: 0;
-    width: 0;
-    height: 2px;
-    background-color: #fff;
-    transition: width 0.3s ease;
-}
-
-.nav-links a:hover::after {
-    width: 100%;
-}
-
-.nav-links a:hover {
-    color: var(--owo-oscuro);
-}
 
 .tips-section {
     max-width: 800px;
@@ -154,8 +83,6 @@ h2{
 #title-actividades {
     margin: 40px 0 0 115px;
 }
-=======
->>>>>>> b43972285ab7bb60b34fb70c6a6b4e62340889fe
 /* copiar y pegar de aca */
 :root {
             --azul: #15616d;
@@ -167,13 +94,6 @@ h2{
             --ezequiel-oscuro: #09172a;
         }
         
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    color: var(--colorkkdelprofe);
-    font-family: 'system-ui', sans-serif;
-}
 
 body {
     background-color: var(--juana);
